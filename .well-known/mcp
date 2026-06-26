@@ -1,0 +1,36 @@
+{
+  "schema_version": "v1",
+  "name": "flatland",
+  "display_name": "Flatland",
+  "description": "Financial reasoning infrastructure for AI agents — typed models, deterministic compilation, cryptographic receipts via MCP",
+  "homepage": "https://flatlandfi.com",
+  "documentation": "https://flatlandfi.com/docs",
+  "license": "MIT",
+  "categories": [
+    "finance",
+    "financial-modeling",
+    "analytics",
+    "productivity"
+  ],
+  "server": {
+    "transport": "stdio",
+    "command": "npx",
+    "args": ["-y", "flatland-setup"],
+    "env": {
+      "FLATLAND_API_KEY": {
+        "required": true,
+        "description": "Your Flatland API key. Get one at https://flatlandfi.com"
+      }
+    }
+  },
+  "capabilities": {
+    "tools": true,
+    "resources": false,
+    "prompts": false
+  },
+  "tool_count": 37,
+  "pricing": {
+    "free_tier": "50 compiled answers/month",
+    "metered": "$0.10 per compiled answer beyond 50"
+  }
+}
