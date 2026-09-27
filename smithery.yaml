@@ -1,5 +1,5 @@
 # Flatland MCP — Smithery registry manifest
-# https://smithery.ai/server/flatland
+# https://smithery.ai/servers/flatlandfi/flatland
 
 startCommand:
   type: stdio
@@ -10,12 +10,12 @@ startCommand:
     properties:
       apiKey:
         type: string
-        title: "Flatland API Key"
-        description: "Your Flatland API key. Get one at https://flatlandfi.com"
+        title: "flatland API key"
+        description: "Existing flatland API key; see https://flatlandfi.com/install for access and setup."
   commandFunction: |-
     (config) => ({
       command: "npx",
-      args: ["-y", "flatland-setup"],
+      args: ["-y", "flatland-client", "mcp"],
       env: {
         FLATLAND_API_KEY: config.apiKey
       }
