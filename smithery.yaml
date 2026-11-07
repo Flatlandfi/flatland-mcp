@@ -1,5 +1,7 @@
-# Flatland MCP — Smithery registry manifest
-# https://smithery.ai/servers/flatlandfi/flatland
+# flatland MCP — legacy hosted-client manifest
+# This starts flatland-client for existing API-key holders, not Desk's local connection.
+# Connection guide: https://github.com/Flatlandfi/flatland-mcp#existing-api-key-holders
+# Editing this file does not update an existing Smithery listing.
 
 startCommand:
   type: stdio
@@ -10,8 +12,8 @@ startCommand:
     properties:
       apiKey:
         type: string
-        title: "flatland API key"
-        description: "Existing flatland API key; see https://flatlandfi.com/install for access and setup."
+        title: "Existing flatland API key"
+        description: "For the legacy hosted connection only. See https://github.com/Flatlandfi/flatland-mcp#existing-api-key-holders."
   commandFunction: |-
     (config) => ({
       command: "npx",
