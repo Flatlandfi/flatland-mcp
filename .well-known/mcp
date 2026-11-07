@@ -1,10 +1,10 @@
 {
   "schema_version": "v1",
   "name": "flatland",
-  "display_name": "flatland",
-  "description": "Connect an MCP-compatible agent to flatland's financial modeling engine.",
+  "display_name": "flatland (legacy hosted connection)",
+  "description": "Legacy hosted modeling connection for existing flatland API-key holders. For Desk's local connection, use its Your own agent setup.",
   "homepage": "https://flatlandfi.com",
-  "documentation": "https://flatlandfi.com/install",
+  "documentation": "https://github.com/Flatlandfi/flatland-mcp#existing-api-key-holders",
   "license": "MIT",
   "categories": [
     "finance",
@@ -15,11 +15,15 @@
   "server": {
     "transport": "stdio",
     "command": "npx",
-    "args": ["-y", "flatland-client", "mcp"],
+    "args": [
+      "-y",
+      "flatland-client",
+      "mcp"
+    ],
     "env": {
       "FLATLAND_API_KEY": {
         "required": true,
-        "description": "Existing flatland API key; see https://flatlandfi.com/install for access and setup."
+        "description": "Existing flatland API key for the legacy hosted connection. Desk's local connection does not use this key."
       }
     }
   },
